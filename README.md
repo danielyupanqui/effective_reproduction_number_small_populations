@@ -1,1 +1,1 @@
-# estimating_effective_reproduction_number_small_populations
+# A Simplified Approach for Estimating the Effective Reproduction Number in Small Populations
