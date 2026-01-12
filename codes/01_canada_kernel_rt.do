@@ -10,7 +10,7 @@
 *1. Import data
 {
  *Import the dta file
-  use ${data}/local_waves_data_final, clear	
+  use ${data}/local_covid_cases, clear	
 }
 
 *2. Prepare data
@@ -135,6 +135,7 @@
 		   
 	graph save ${results}/canada_allkernels_am, replace
 }
+
 
 
 
