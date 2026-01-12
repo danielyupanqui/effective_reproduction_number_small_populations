@@ -49,7 +49,7 @@
 
 *2. Defining globals 
 {
-  global codes      "${root}/dofiles"
+  global codes      "${root}/codes"
   global data       "${root}/data"
   global results    "${root}/results"
 }
