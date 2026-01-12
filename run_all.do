@@ -49,7 +49,7 @@
 
 *2. Defining globals 
 {
-  global dofiles    "${root}/dofiles"
+  global codes      "${root}/dofiles"
   global data       "${root}/data"
   global results    "${root}/results"
 }
@@ -57,15 +57,15 @@ l
 
 *2. Run pipeline
 { 
-*  do ${dofiles}/01_canada_kernel_rt.do
-*  do ${dofiles}/02_provinces_kernel_rt.do
-*  do ${dofiles}/03_regions_kernel_rt.do
+  do ${codes}/01_canada_kernel_rt.do
+  do ${codes}/02_provinces_kernel_rt.do
+  do ${codes}/03_regions_kernel_rt.do
   
-*  rscript using ${dofiles}/04_rt_epiestim_canada.R 
-*  rscript using ${dofiles}/05_rt_epiestim_provinces.R 
-*  rscript using ${dofiles}/06_rt_epiestim_regions.R 
+  rscript using ${codes}/04_rt_epiestim_canada.R 
+  rscript using ${codes}/05_rt_epiestim_provinces.R 
+  rscript using ${codes}/06_rt_epiestim_regions.R 
 
-*  do ${dofiles}/07_graphs_epiestim_kernel.do
-  do ${dofiles}/08_stats_epiestim_kernel.do
-  do ${dofiles}/09_ols_epiestim_kernel.do 	
+  do ${codes}/07_graphs_epiestim_kernel.do
+  do ${codes}/08_stats_epiestim_kernel.do
+  do ${codes}/09_ols_epiestim_kernel.do 	
 }
