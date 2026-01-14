@@ -12,7 +12,7 @@
  #Relative paths from project root
   data_file   <- "data/regions_rt.xlsx"
   results_dir <- "results"
-  output_file <- "results/rt_epiestim_regions.xlsx"
+  output_file <- "results/r_region_epiestim.xlsx"
 
  #Create results folder if needed
   if (!dir.exists(results_dir)) dir.create(results_dir)
@@ -58,7 +58,7 @@
     )
     
    #Save output
-    output_file <- file.path(results_dir, paste0("r_epiestim_", i, ".xlsx"))
+    output_file <- file.path(results_dir, paste0("r_region_epiestim_", i, ".xlsx"))
     write_xlsx(as.data.frame(R_si_parametric$R), output_file)
     
     cat("Saved:", output_file, "\n")

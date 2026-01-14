@@ -12,7 +12,7 @@
  #Relative paths from project root
   data_file   <- "data/provinces_rt.xlsx"
   results_dir <- "results"
-  output_file <- "results/rt_epiestim_provinces.xlsx"
+  output_file <- "results/r_prov_epiestim.xlsx"
   
  #Get sheet names once (faster + cleaner)
   sheets <- excel_sheets(data_file)

@@ -4,6 +4,11 @@
  #Initial update: 29/03/2025
  #Last update:    30/12/2025
 
+ #Install packages
+  install.packages("readxl")
+  install.packages("EpiEstim")
+  install.packages("writexl")
+
  #Imports packages
   library(readxl)
   library(EpiEstim)
@@ -11,7 +16,7 @@
 
  #Relative paths from project root
   data_file   <- "data/canada_rt.xlsx"
-  output_file <- "results/rt_epiestim_canada.xlsx"
+  output_file <- "results/r_epiestim_canada.xlsx"
 
  #Load data
   data <- read_excel(data_file)

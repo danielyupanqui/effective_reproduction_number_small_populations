@@ -9,6 +9,15 @@
 
 *1. Canada: Merge Epiestim with Kernels
 {
+ *Import excel and saving in dta
+  import excel "${results}/r_epiestim_canada.xlsx", ///
+         sheet("Sheet1") firstrow clear
+  
+  rename MeanR r_epiestim
+  generate  id = t_end
+  save ${results}/r_epiestim_canada.dta, replace
+  
+ *Make graph 	
   use ${data}/canada_rt, clear
   joinby id using ${results}/r_epiestim_canada, unm(b)
   tab _merge
@@ -28,6 +37,17 @@
 
 *2. Provinces: Merge Epiestim with Kernels
 {
+ *Import excel and saving in dta
+  forvalues x = 1/13 {	 
+  import excel "${results}/r_prov_epiestim_`x'.xlsx", ///
+         sheet("Sheet1") firstrow clear  
+
+  rename MeanR r_epiestim_`x'
+  generate id  = t_end
+  save ${results}/r_prov_epiestim_`x'.dta, replace
+  }
+  
+ *Make graphs
   use ${data}/province_rt, clear
   forvalues x = 1/13 {	
   joinby id using ${results}/r_prov_epiestim_`x', unm(b)
@@ -35,7 +55,7 @@
   drop _merge
    	
     twoway (line r_rectangle_`x'_am    date if province == `x') || ///  
-		   (line r_epiestim_`x'       date if province == `x')  || ///
+		   (line r_epiestim_`x'        date if province == `x')  || ///
 		    , title("province = `x'") 
 	   
    graph save ${results}/province_epiestim_kernel_rect_`x', replace
@@ -44,14 +64,25 @@
 
 *3. Health Regions: Merge Epiestim with Kernels
 {
+ *Import excel and saving in dta
+  forvalues x = 1/99 {	 
+  import excel "${results}/r_region_epiestim_`x'.xlsx", ///
+         sheet("Sheet1") firstrow clear  
+ 
+  rename MeanR = r_epiestim_`x'
+  generate id = t_end
+  save ${results}/rt_epiestim_`x'.dta, replace
+  }
+  
+ *Make graphs	
   use ${data}/region_rt, clear
   forvalues x = 1/99 {	
   joinby id using ${results}/r_region_epiestim_`x', unm(b)
   tab _merge
   drop _merge
    	
-    twoway (line r_rectangle_`x'_am    date if hr == `x') || ///    
-		   (line r_epiestim_`x'       date if  hr == `x') || ///
+    twoway (line r_rectangle_`x'_am    date if  hr == `x') || ///    
+		   (line r_epiestim_`x'        date if  hr == `x') || ///
 		    , title("hr = `x'") 
 	   
    graph save ${results}/region_epiestim_kernel_rect_`x', replace
