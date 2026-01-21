@@ -4,8 +4,7 @@ Charles Plante and I have develop a methodology for estimating daily reproductio
 
 ## Instructions
 
-1. Download the data and code from the GitHub repository:  
-   https://github.com/danielyupanqui/effective_reproduction_number_small_populations
+1. Download the data and code from this GitHub repository.
 
 2. Save the project folder in any location on your computer.
 
