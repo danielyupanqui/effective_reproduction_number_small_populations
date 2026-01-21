@@ -4,6 +4,10 @@ Charles Plante and I have develop a methodology for estimating daily reproductio
 
 ## Instructions
 
+Do not change the working directory manually.
+This pipeline is designed to use a portable directory structure, meaning all file paths are defined relative to the project root. You can place the project folder anywhere on your system and run **run_all.do** without modifying paths or settings. All required directories and file references are handled internally.
+Follow the next steps for replicate this project:
+
 1. Download the data and code from this GitHub repository.
 
 2. Save the project folder in any location on your computer.
