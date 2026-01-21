@@ -26,7 +26,7 @@ Overall, this work demonstrates that **non-parametric kernel regression** provid
 ## Instructions
 
 Do not change the working directory manually.
-This pipeline is designed to use a portable directory structure, meaning all file paths are defined relative to the project root. You can place the project folder anywhere on your system and run **run_all.do** without modifying paths or settings. All required directories and file references are handled internally. You need to have installed in your device th softwares **STATA** and **R**.
+This pipeline is designed to use a portable directory structure, meaning all file paths are defined relative to the project root. You can place the project folder anywhere on your system and run **run_all.do** without modifying paths or settings. All required directories and file references are handled internally. You need to have installed in your device the softwares **STATA** and **R**.
 Follow the next steps for replicate this project:
 
 1. Download the folders and files from this GitHub repository, i.e. **Code** → **Downlad ZIP**.
