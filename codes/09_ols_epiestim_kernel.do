@@ -111,5 +111,5 @@
              color(red) size(medlarge) place(e))
 
         *Save as Stata graph
-         graph save "region_cv_vs_cases.gph", replace
+         graph save ${results}/region_cv_vs_cases.gph, replace
 }
