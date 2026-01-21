@@ -22,12 +22,12 @@
 
  *Encode health region names
   encode hrname, gen(hr)
-
- *Sort
-  sort prov hr date
   
  *Summation of cumulative, total cases by date
-  collapse(sum) cumulative_cases cases (max) pop, by(date)
+  collapse(sum) cases (max) pop, by(date)
+ 
+ *Cumulative cases 
+  generate cumulative_cases = sum(cases)
  
  *Create the New Cases variable
   generate new_cases = cumulative_cases[_n] - cumulative_cases[_n - 1]
@@ -135,7 +135,6 @@
 		   
 	graph save ${results}/canada_allkernels_am, replace
 }
-
 
 
 

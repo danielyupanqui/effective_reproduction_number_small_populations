@@ -27,10 +27,13 @@
   sort prov hr date
   
  *Region level
-  collapse(sum) cumulative_cases cases (max)pop, by(hr date)
- 
- *Create the New Cases variable
+  collapse(sum) cases (max)pop, by(hr date)
+
+ *Cumulartive cases
   sort   hr date
+  bysort hr: generate cumulative_cases = sum(cases) 
+  
+ *Create the New Cases variable
   bysort hr: generate new_cases = cumulative_cases[_n] -    ///
                                   cumulative_cases[_n  - 1]
 }

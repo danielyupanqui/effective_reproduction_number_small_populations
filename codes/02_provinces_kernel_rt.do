@@ -27,7 +27,10 @@
   sort province_code date
   
  *Provincial level
-  collapse(sum) cumulative_cases cases (max) pop, by(province_code prov date)
+  collapse(sum) cases (max) pop, by(province_code prov date)
+ 
+ *Cumulative cases
+  bys province_code: generate cumulative_cases = sum(cases)
  
  *Create the New Cases variable
   sort   province_code date
@@ -138,4 +141,3 @@
 	graph save ${results}/province_`y'_allkernels_am, replace
   }
 }	  
-

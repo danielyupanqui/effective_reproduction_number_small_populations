@@ -10,16 +10,16 @@
 *1. Canada: Merge Epiestim with Kernels
 {
  *Import excel and saving in dta
-  import excel "${results}/r_epiestim_canada.xlsx", ///
+  import excel "${results}/r_canada_epiestim.xlsx", ///
          sheet("Sheet1") firstrow clear
   
   rename MeanR r_epiestim
   generate  id = t_end
-  save ${results}/r_epiestim_canada.dta, replace
+  save ${results}/r_canada_epiestim.dta, replace
   
  *Make graph 	
   use ${data}/canada_rt, clear
-  joinby id using ${results}/r_epiestim_canada, unm(b)
+  joinby id using ${results}/r_canada_epiestim, unm(b)
   tab _merge
   
  twoway ///
@@ -69,9 +69,9 @@
   import excel "${results}/r_region_epiestim_`x'.xlsx", ///
          sheet("Sheet1") firstrow clear  
  
-  rename MeanR = r_epiestim_`x'
+  rename MeanR r_epiestim_`x'
   generate id = t_end
-  save ${results}/rt_epiestim_`x'.dta, replace
+  save ${results}/r_region_epiestim_`x'.dta, replace
   }
   
  *Make graphs	

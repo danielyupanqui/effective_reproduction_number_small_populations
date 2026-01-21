@@ -9,7 +9,7 @@
 *1. Canada: Merge Epiestim with Kernels
 {
   use ${data}/canada_rt, clear
-  joinby id using ${results}/r_epiestim_canada, unm(b)
+  joinby id using ${results}/r_canada_epiestim, unm(b)
   
  *Create the correlation variable 
   egen corr_epi_kernel = corr(r_rectangle_am r_epiestim)
@@ -126,7 +126,7 @@
 
 *3. Health Regions: Merge Epiestim with Kernels
 {
-  use ${data}/region_rt_activecases, clear
+  use ${data}/region_rt, clear
   forvalues x = 1/99 {	
     joinby id using ${results}/r_region_epiestim_`x', unm(b)
     tab _merge
