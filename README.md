@@ -1,6 +1,27 @@
 # A Simplified Approach for Estimating the Effective Reproduction Number in Small Populations
 
-Charles Plante and I have develop a methodology for estimating daily reproduction numbers of infectious diseases in small population areas by focusing on the growth rate defined by the SIR model. The daily growth rate of COVID-19 is estimated using non-parametric kernel regression for Canada at the national level, across its provinces and territories, and within 99 health regions, and these estimates are compared directly with those produced by EpiEstim. Our results show that kernel regression yields smoother and more reliable growth-rate estimates in both large and small populations, particularly in settings with sparse or volatile case data. Consequently, our approach produces more stable and robust daily reproduction-number estimates in small population areas than EpiEstim. Overall, the findings indicate that standard methods often rely on assumptions that do not hold in low-incidence settings, and that non-parametric kernel regression offers a more consistent framework for estimating disease spread across heterogeneous population sizes.
+## Overview
+
+Charles Plante and I develop a methodology to estimate **daily reproduction numbers** of infectious diseases in **small population areas** by focusing on the growth rate derived from the **SIR model**.
+
+We estimate the daily growth rate of COVID-19 using **non-parametric kernel regression** for Canada at multiple geographic levels, including:
+- The national level  
+- Provinces and territories  
+- 99 public health regions  
+
+These estimates are directly compared with those produced by **EpiEstim**, a widely used standard method.
+
+## Key Findings
+
+- Kernel regression produces **smoother and more reliable growth-rate estimates** in both large and small populations.
+- The advantages are especially pronounced in settings with **sparse or volatile case data**.
+- As a result, our approach yields **more stable and robust daily reproduction-number estimates** in small population areas than EpiEstim.
+- The findings suggest that standard methods often rely on assumptions that may not hold in **low-incidence settings**.
+
+## Contribution
+
+Overall, this work demonstrates that **non-parametric kernel regression** provides a more consistent and flexible framework for estimating disease transmission dynamics across **heterogeneous population sizes**, improving inference where traditional methods perform poorly.
+
 
 ## Instructions
 
