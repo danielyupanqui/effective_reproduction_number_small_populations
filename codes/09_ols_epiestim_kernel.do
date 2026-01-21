@@ -82,7 +82,7 @@
   local ymax = _b[_cons] + _b[cases_mean] * `xmax'
 }
 
-*4. Provincial Graph: scatter + linear fit + elasticity text label
+*4. Region Graph: scatter + linear fit + elasticity text label
 {	
   twoway                                                            /// 
         /// Scatter plot   
@@ -109,4 +109,7 @@
         /// Add slope annotation   
         text(`ymax' `xmax' "Slope = `slope'",                       ///
              color(red) size(medlarge) place(e))
+
+        *Save as Stata graph
+         graph save "region_cv_vs_cases.gph", replace
 }
