@@ -19,3 +19,18 @@ Follow the next steps for replicate this project:
    - Use **File → Open**
 
 5. Run the pipeline by typing: do run_all.do
+
+## Data
+
+This paper utilizes a case study of the COVID-19 pandemic in Canada, employing data publicly available from the **COVID-19 Canada Open Data Working Group**.
+
+The data are sourced from the group’s public GitHub repository, which provides harmonized, regularly updated COVID-19 epidemiological data for Canada:
+- https://github.com/ccodwg/Covid19Canada
+
+### Citation
+
+COVID-19 Canada Open Data Working Group. (2022). *COVID-19 Canada Open Data Working Group dataset*.  
+
+### Data License and Availability
+
+The data are openly available and distributed under an open-data license, permitting use, redistribution, and adaptation with appropriate attribution. Users should consult the original repository for the most current version of the data and detailed licensing information.
