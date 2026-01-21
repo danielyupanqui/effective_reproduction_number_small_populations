@@ -23,7 +23,7 @@ These estimates are directly compared with those produced by **EpiEstim**, a wid
 Overall, this work demonstrates that **non-parametric kernel regression** provides a more consistent and flexible framework for estimating disease transmission dynamics across **heterogeneous population sizes**, improving inference where traditional methods perform poorly.
 
 
-## Instructions
+## Replication Instructions
 
 Do not change the working directory manually.
 This pipeline is designed to use a portable directory structure, meaning all file paths are defined relative to the project root. You can place the project folder anywhere on your system and run **run_all.do** without modifying paths or settings. All required directories and file references are handled internally. You need to have installed in your device the softwares **STATA** and **R**.
