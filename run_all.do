@@ -54,7 +54,7 @@
   global results    "${root}/results"
 }
 
-*2. Run pipeline
+*3. Run pipeline
 { 
   do ${codes}/01_canada_kernel_rt.do
   do ${codes}/02_provinces_kernel_rt.do
