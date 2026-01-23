@@ -53,7 +53,6 @@
   global data       "${root}/data"
   global results    "${root}/results"
 }
-l
 
 *2. Run pipeline
 { 
