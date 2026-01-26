@@ -6,12 +6,6 @@
   Last update:    10/12/2025
 */
 
-*0. Set up
-{
-  clear all
-  cd "/Users/camila/Documents/daniel_yupanqui/work/covid_waves"
-}
-
 *1. Load and prepare provincial data
 {
   use ${results}/stats_provinces, clear
