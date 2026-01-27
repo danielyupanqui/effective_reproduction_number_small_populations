@@ -77,7 +77,7 @@
 {
  *Calculate growth rate using difference in logs 
   generate growth_rate_am = ln(cases_am[_n]) - ln(cases_am[_n-1])		
-  replace  growth_rate_am = 0 if missing(growth_rate)
+  replace  growth_rate_am = 0 if missing(growth_rate_am)
 }
 
 *7. Non Parametric Kernel Estimation and Reproduction Number
@@ -135,6 +135,7 @@
 		   
 	graph save ${results}/canada_allkernels_am, replace
 }
+
 
 
 
