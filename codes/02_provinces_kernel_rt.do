@@ -67,7 +67,7 @@
  *Calculate growth rate using difference in logs 
   bysort province_code: generate growth_rate_am = ln(cases_am[_n]) - ///
                                                   ln(cases_am[_n-1])		
-  replace  growth_rate_am = 0 if missing(growth_rate)
+  replace  growth_rate_am = 0 if missing(growth_rate_am)
 }
 
 *9. Parametric Kernel Estimation and Reproduction Number over provinces
@@ -141,3 +141,4 @@
 	graph save ${results}/province_`y'_allkernels_am, replace
   }
 }	  
+
