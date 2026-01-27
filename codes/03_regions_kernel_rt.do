@@ -66,7 +66,7 @@
  *Calculate growth rate using difference in logs 
   bysort  hr: generate growth_rate_am = ln(cases_am[_n]) - ///
                                         ln(cases_am[_n-1])		
-  replace growth_rate_am = 0 if missing(growth_rate)
+  replace growth_rate_am = 0 if missing(growth_rate_am)
 }
 
 *6. Non Parametric Kernel Estimation and Reproduction Number over regions
@@ -127,3 +127,4 @@
 	graph save ${results}/region_`x'_allkernels_am, replace
 }
 }  
+
